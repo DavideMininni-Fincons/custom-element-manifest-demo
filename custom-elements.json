@@ -1,0 +1,95 @@
+{
+  "schemaVersion": "1.0.0",
+  "readme": "",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "src/base-class.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "BaseElement",
+          "members": [
+            {
+              "kind": "method",
+              "name": "open",
+              "privacy": "protected",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              }
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "BaseElement",
+          "declaration": {
+            "name": "BaseElement",
+            "module": "src/base-class.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/derived-class.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "DerivedElement",
+          "members": [
+            {
+              "kind": "method",
+              "name": "open",
+              "privacy": "protected",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "inheritedFrom": {
+                "name": "BaseElement",
+                "module": "src/base-class.ts"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "render",
+              "privacy": "protected",
+              "return": {
+                "type": {
+                  "text": "TemplateResult"
+                }
+              }
+            }
+          ],
+          "superclass": {
+            "name": "BaseElement",
+            "module": "/src/base-class"
+          }
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "DerivedElement",
+          "declaration": {
+            "name": "DerivedElement",
+            "module": "src/derived-class.ts"
+          }
+        }
+      ]
+    }
+  ]
+}
