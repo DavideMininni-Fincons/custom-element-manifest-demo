@@ -2,7 +2,7 @@ import {html, type TemplateResult} from "lit";
 import {customElement} from 'lit/decorators.js';
 import {BaseElement} from "./base-class";
 
-@customElement('sbb-popover')
+@customElement('derived-class')
 export class DerivedElement extends BaseElement {
     public open(): void {
         console.log('Hello')
